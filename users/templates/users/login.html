@@ -1,6 +1,28 @@
 {% extends 'main/layout.html'%}
+{% load crispy_forms_tags %}
+
 {% block content %}
-    <h1>
-        Login page
-    </h1>
+<div class="card mt-2">
+    <div class="card-body">
+        <h5 class="card-title text-primary">
+            Log In
+        </h5>
+        <p class="card-text ">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    {{form|crispy}}
+                </fieldset>
+                <div class="form-group mt-2">
+                    <button class="btn btn-outline-info" type="submit">
+                        Login
+                    </button>
+                </div>
+            </form>
+            <small class="text-muted">
+                Need an Account? <a href="{% url 'register' %}">Sign Up</a>
+            </small>
+        </p>
+    </div>
+</div>
 {% endblock content %}
