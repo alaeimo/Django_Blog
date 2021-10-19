@@ -4,9 +4,25 @@
 {% block content %}
 <div class="card mt-2">
     <div class="card-body">
-        <h5 class="text-dark">{{ user.username }}</h5>
-        <img class="rounded-circle" src="{{ user.profile.image.url}}" width="50" height="50">
-        <small class="text-muted text-secondary">{{ user.email}}</small>
+        <div class="card-title align-items-center">
+            <h5 class="text-dark">{{ user.username }}</h5>
+            <img class="rounded-circle" src="{{ user.profile.image.url}}" width="50" height="50">
+            <small class="text-muted text-secondary">{{ user.email}}</small>
+        </div>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                {{u_form|crispy}}
+                {{p_form|crispy}}
+    
+            </fieldset>
+            <div class="form-group mt-2">
+                <button class="btn btn-outline-info" type="submit">
+                    Update
+                </button>
+            </div>
+        </form>
+
     </div>
 </div>
 {% endblock content %}
