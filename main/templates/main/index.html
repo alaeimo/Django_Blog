@@ -1,21 +1,19 @@
 {% extends 'main/layout.html'%}
 {% block content %}
     {% for post in posts %}
-    <div class="card mt-2">
+    <div class="card mt-2 mb-2">
         <div class="card-body">
-            <h5 class="card-title text-primary">
-                {{ post.title }}
-            </h5>
+            <div class="card-title text-primary">
+                <a class="h5" href="{% url 'post-detail' post.id %}">
+                    {{ post.title }}
+                </a>
+            </div>
             <img class="rounded-circle" src="{{ post.author.profile.image.url}}" width="50" height="50">
-
-            <!-- <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#e83e8c"/><text x="50%" y="50%" fill="" dy=".3em"></text></svg> -->
             <small class="text-muted text-secondary">{{ post.author }}, {{ post.post_date|date:"F d, Y" }}</small>
             <p class="card-text ">
                 <p>{{ post.content }}</p>
-
             </p>
         </div>
     </div>
     {% endfor %}
-
 {% endblock content %}

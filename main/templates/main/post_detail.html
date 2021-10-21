@@ -1,0 +1,20 @@
+{% extends 'main/layout.html'%}
+{% block content %}
+    <div class="card mt-2">
+        <div class="card-body">
+            <div class="card-title text-primary">
+              <h5> {{ post.title }}</h5> 
+            </div>
+            <img class="rounded-circle" src="{{ object.author.profile.image.url}}" width="50" height="50">
+            <small class="text-muted text-secondary">{{ object.author }}, {{ object.post_date|date:"F d, Y" }}</small>
+            {% if user.is_authenticated and object.author.id == user.id %}
+                <a class="btn btn-sm btn-danger" href="{% url 'post-delete' object.id %}">Delete</a>
+                <a class="btn btn-sm btn-primary" href="{% url 'post-update' object.id %}">Update</a>
+            {% endif %}
+            <p class="card-text ">
+                <p>{{ object.content }}</p>
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}
