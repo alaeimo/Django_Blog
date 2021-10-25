@@ -1,4 +1,21 @@
 {% extends 'main/layout.html'%}
 {% block content %}
-    <h1> About Page </h1>
+    <div class="card mt-2">
+        <div class="card-body">
+            <div class="card-title text-primary">
+                <h1> About </h1> 
+            </div>
+            <small class="text-muted text-secondary">Django Blog</small>
+            <h5 class="mt-4">This is a simple blog implemented using Django and Bootstrap.</h5>
+            <h6 class="card-text mt-4">Features:</h6>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">- You can register an account on this blog</li>
+                <li class="list-group-item">- Update your profile picture, email, and username</li>
+                <li class="list-group-item">- If you forget your password, receive an email and recover it</li>
+                <li class="list-group-item">- Post new post (similar to Twitter)</li>
+                <li class="list-group-item">- Update your posts</li>
+                <li class="list-group-item">- Filter and view other users' posts by their usernames</li>
+            </ul>
+        </div>
+    </div>
 {% endblock content %}
