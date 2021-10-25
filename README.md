@@ -1,6 +1,6 @@
 
 # Django Blog
-## This is a simple blog implemented using Django and Bootstrap
+## Django and Bootstrap are used here to build a simple blog
 ### Features:
     - You can register an account on this blog
     - Update your profile picture, email, and username
