@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.contrib.auth.models import User
+from users.models import CustomUser
 from .models import Post
 
 def home(request):
@@ -22,7 +22,7 @@ class UserPostListView(ListView):
     paginate_by = 4
 
     def get_queryset(self):
-        user = get_object_or_404(User, username=self.kwargs.get('username'))
+        user = get_object_or_404(CustomUser, username=self.kwargs.get('username'))
         return Post.objects.filter(author=user).order_by('-post_date')
 
 class PostDetailView(DetailView):
