@@ -95,4 +95,4 @@ heroku run python manage.py migrate
 heroku run python manage.py createsuperuser
 ```
 
-The project will be available at http://127.0.0.1:8000
+The project will be available at https://<herokuappname>.herokuapp.com/
