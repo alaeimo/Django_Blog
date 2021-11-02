@@ -36,7 +36,7 @@ pip install -r requirements.txt
 Create the database and run the development server:
 
 ```bash
-cd django_school
+cd django_blog
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
@@ -90,7 +90,7 @@ SECRET_KEY = <YOUR_SECRET_KEY>
 Create the database and run the development server:
 
 ```bash
-cd django_school
+cd django_blog
 heroku run python manage.py migrate
 heroku run python manage.py createsuperuser
 ```
