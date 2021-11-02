@@ -94,5 +94,3 @@ cd django_school
 heroku run python manage.py migrate
 heroku run python manage.py createsuperuser
 ```
-
-The project will be available at https://<herokuappname>.herokuapp.com/
