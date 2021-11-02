@@ -6,7 +6,7 @@
 ## [demo](https://alaeimoblog.herokuapp.com/)
 
 ## Django and Bootstrap are used here to build a simple blog
-![Django Blog Screenshot](https://raw.githubusercontent.com/alaeimono/django_blog/main/media/screenshot.png)
+![Django Blog Screenshot](https://github.com/alaeimono/django_blog/blob/main/media/screenshot.png)
 
 ### Features:
     - You can register an account on this blog
@@ -42,4 +42,4 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-The project will be available at http://127.0.0.1:8000, Login using::
+The project will be available at http://127.0.0.1:8000
